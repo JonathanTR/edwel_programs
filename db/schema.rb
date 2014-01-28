@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140128222929) do
   end
 
   create_table "seminars", force: true do |t|
-    t.integer "location_id"
+    t.integer "course_id"
   end
 
 end
