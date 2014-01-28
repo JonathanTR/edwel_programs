@@ -1,0 +1,18 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: edwel_programs_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: edwel_programs_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: edwel_programs_production
+  pool: 5
