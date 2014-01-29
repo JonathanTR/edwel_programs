@@ -4,7 +4,9 @@ EdwelPrograms::Application.routes.draw do
 
   root to: 'locations#index'
   
-  resources :locations, only: [:index, :show], path: ''
+  resources :locations, only: [:index, :show], path: '' do
+    resources :courses, only: [:show], path: '', as: :course
+  end
 
 
 end
