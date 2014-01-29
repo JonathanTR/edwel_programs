@@ -1,9 +1,12 @@
 EdwelPrograms::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  
-  resources :locations, only: [:index]
 
   root to: 'locations#index'
+  
+  resources :locations, only: [:index, :show], path: '' do
+    resources :courses, only: [:show], path: '', as: :course
+  end
+
 
 end

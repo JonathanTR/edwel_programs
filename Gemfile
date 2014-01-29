@@ -8,12 +8,14 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'friendly_id', '~> 5.0.0'
 
 
 group :development do
   gem 'better_errors'
   gem 'sextant'
   gem 'debugger'
+  gem 'binding_of_caller'
 end
 
 group :test do
