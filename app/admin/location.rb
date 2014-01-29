@@ -5,6 +5,12 @@ ActiveAdmin.register Location do
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   permit_params :id, :name, :slug, {course_ids: []}
+
+  controller do
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
+    end
+  end
   
   index do
     column :id
