@@ -98,6 +98,8 @@ GEM
     ffi (1.9.3)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
+    friendly_id (5.0.2)
+      activerecord (~> 4.0.0)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -219,6 +221,7 @@ DEPENDENCIES
   debugger
   factory_girl_rails (~> 4.0)
   faker
+  friendly_id (~> 5.0.0)
   jquery-rails
   pg
   rails (= 4.0.1)
