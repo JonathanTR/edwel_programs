@@ -1,0 +1,26 @@
+$navbar-height: 70px;
+
+@import 'bootstrap';
+
+.navbar-brand {
+  padding: 5px;
+  height: $navbar-height;
+  .no-flexbox & {
+    margin-left: 2%;
+  }
+}
+
+#register {
+  @media (max-width: $screen-sm-min){
+    display: block;
+    width: 80%;
+    margin: 2px auto;
+  }
+  .no-flexbox & {
+    display: block;
+    float: right;
+    margin-right: 5%;
+    height: $navbar-height - 30;
+    text-align: center;
+  }
+}
