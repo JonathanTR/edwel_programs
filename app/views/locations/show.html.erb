@@ -1,1 +1,4 @@
-<h1>Locations Show</h1>
+<h1><%= @location.name %></h1>
+<% @location.courses.each do |course| %>
+<%= link_to course.title, location_course_path(@location, course) %>
+<% end %>
