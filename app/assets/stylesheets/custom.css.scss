@@ -1,13 +1,27 @@
 $navbar-height: 70px;
-
+$footer-height: 70px;
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Alegreya:400italic,400);
 @import 'bootstrap';
+
+// IE8 Adjustments
+html, body {
+  height: 100%
+}
 
 .navbar-brand {
   padding: 5px;
   height: $navbar-height;
-  .no-flexbox & {
-    margin-left: 2%;
-  }
+}
+
+.footer {
+  height: $footer-height;
+  width: 100%;
+  background-color: #F8F8F8;
+}
+
+#wrap {
+  min-height: 100%;
+  width: 100%;
 }
 
 #register {
