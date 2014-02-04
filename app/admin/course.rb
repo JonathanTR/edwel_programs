@@ -4,7 +4,7 @@ ActiveAdmin.register Course do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :id, :title, {location_ids: []}
+  permit_params :id, :title, :tagline, {location_ids: []}
 
   controller do
     def find_resource
@@ -27,6 +27,7 @@ ActiveAdmin.register Course do
     f.inputs do
       f.input :title
       f.input :locations, as: :check_boxes, input_html: { multiple: true } # add locations input here
+      f.input :tagline
     end
     f.actions
   end
