@@ -4,9 +4,13 @@
 
 // IE8 Adjustments
 html, body {
-  height: 100%
+  height: 100%;
+  font-size: 14px;
 }
 @import 'partials/navbar';
+@import 'courses/custom';
+
+
 
 .footer {
   height: $footer-height;
