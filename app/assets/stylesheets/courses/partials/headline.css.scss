@@ -1,11 +1,23 @@
 #headline-unit {
   text-align: center;
-  $height: 100vmin;
-  min-height: $height;
+  border-bottom: 10px solid $pomegranate;
+  .backgroundsize & {
+    background: url('background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    $height: 90vmin;
+    min-height: $height;
+    padding-top: $height - 60;
+  }
+    padding-top: 18em;
+    padding-bottom: 24em;
+    background-color: #ddd;
   h1 {
-    margin-top: 4.5em;
-    margin-top: $height - 60;
-    font-size: 4em;
+    font-size: 5em;
     font-family: 'Alegreya', Serif;
+  }
+  h4 {
+    margin: 3em;
   }
 }
