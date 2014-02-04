@@ -1,1 +1,6 @@
-<h1>congratulations! : <%= @course.title %></h1>
+<h1>Welcome to our <%= @course.title %> class</h1>
+
+<h3>These are upcoming classes:</h3>
+<% @seminars.each do |seminar| %>
+<p><%= seminar.name %></p>
+<% end %>
