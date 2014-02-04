@@ -1,0 +1,8 @@
+.navbar {
+  border-bottom: 4px solid lighten($navbar-default-bg, 30%)
+}
+
+.navbar-brand {
+  padding: 5px;
+  height: $navbar-height;
+}
