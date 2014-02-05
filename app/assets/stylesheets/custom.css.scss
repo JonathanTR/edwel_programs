@@ -1,45 +1,15 @@
-@import 'partials/typography';
-@import 'partials/pallet';
-@import 'partials/variables';
-@import 'bootstrap';
+@import "partials/typography";
+@import "partials/pallet";
+@import "partials/variables";
+@import "bootstrap";
 
 // IE8 Adjustments
 html, body {
   height: 100%;
   font-size: 14px;
 }
-@import 'partials/navbar';
-@import 'courses/custom';
 
+@import "partials/navbar";
+@import "courses/custom";
+@import "partials/footer";
 
-
-.footer {
-  height: $footer-height;
-  width: 100%;
-  color: white;
-  background-color: $navbar-default-bg;
-}
-
-#wrap {
-  min-height: 100%;
-  width: 100%;
-  .no-flexboxlegacy & {
-    margin-top: 0;
-    padding-top: 30px;
-  }
-}
-
-#register {
-  @media (max-width: $screen-sm-min){
-    display: block;
-    width: 80%;
-    margin: 2px auto;
-  }
-  .no-mediaqueries & {
-    display: block;
-    float: right;
-    margin-right: 5%;
-    height: $navbar-height - 30;
-    text-align: center;
-  }
-}
