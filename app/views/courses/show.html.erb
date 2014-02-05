@@ -1,1 +1,3 @@
-<%= render "courses/headline"  %>
+<% unless @course.tagline == "" %>
+  <%= render "courses/headline"  %>
+<% end %>
