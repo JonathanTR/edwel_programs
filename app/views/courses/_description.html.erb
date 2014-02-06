@@ -1,3 +1,12 @@
-<div class="container">
-  <%= raw @course.description  %>
-</div>
+<section id="description-unit">
+  <div class="container">
+    <div id="card">
+      <div id="description-text">
+        <%= raw @course.description  %>
+      </div>
+      <div class="image-cropper">
+        <%= image_tag("taking-notes.jpg")  %>
+      </div>
+    </div>
+  </div>
+</section>
