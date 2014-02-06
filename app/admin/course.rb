@@ -26,8 +26,10 @@ ActiveAdmin.register Course do
   form do |f|
     f.inputs do
       f.input :title
+      f.input :slug
       f.input :locations, as: :check_boxes, input_html: { multiple: true } # add locations input here
       f.input :tagline
+      f.input :description, as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :source]
     end
     f.actions
   end
