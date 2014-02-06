@@ -2,22 +2,14 @@
   @include header-style;
   background-color: #F8F7F3;
   border-bottom: 10px solid $emerald;
-  .cssvminunit & {
-    $description-height: 90vmin;
-    min-height: $description-height;
-    padding-top: $description-height - 70;
-  }
-  .no-cssvminunit & {
-    height: 600px;
-    padding: auto 0;
-  }
+  @include vertical-fill(90);
   #description-card{
     @include outer-container;
     background-color: $sunflower;
     border-radius: 5px;
     font-size: 1.2em;
     .no-cssvminunit & {
-      margin: 20% auto;
+      margin: 15% auto 25%;
     }
     .image-cropper {
       height: 100%;
