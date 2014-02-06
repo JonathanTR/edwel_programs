@@ -12,6 +12,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'friendly_id', '~> 5.0.0'
 gem 'activeadmin-dragonfly', git: 'http://github.com/stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', git: 'http://github.com/stefanoverna/activeadmin-wysihtml5'
+gem 'neat'
 
 group :development do
   gem 'better_errors'
