@@ -8,6 +8,11 @@ html, body {
   height: 100%;
   font-size: 14px;
 }
+body {
+  .no-cssvminunit & {
+    padding-top: ($navbar-height / 2) - 22;
+  }
+}
 
 @import "partials/navbar";
 @import "courses/custom";
