@@ -1,4 +1,6 @@
-<h1><%= @location.name %></h1>
-<% @location.courses.each do |course| %>
-<%= link_to course.title, location_course_path(@location, course) %>
-<% end %>
+<div class='container'>
+  <h1><%= @location.name %></h1>
+  <% @location.courses.each do |course| %>
+  <%= link_to course.title, location_course_path(@location, course) %>
+  <% end %>
+</div>

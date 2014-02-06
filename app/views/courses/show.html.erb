@@ -1,6 +1,7 @@
-<h1>Welcome to our <%= @course.title %> class</h1>
+<% unless @course.tagline == "" %>
+  <%= render "courses/headline"  %>
+<% end %>
 
-<h3>These are upcoming classes:</h3>
-<% @seminars.each do |seminar| %>
-<p><%= seminar.name %></p>
+<% unless @course.description == nil %>
+  <%=  render "courses/description"  %>
 <% end %>

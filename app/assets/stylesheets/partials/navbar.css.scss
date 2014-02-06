@@ -1,0 +1,21 @@
+.navbar {
+  border-bottom: 4px solid lighten($navbar-default-bg, 30%);
+  .navbar-brand {
+    padding: 5px;
+    height: $navbar-height;
+  }
+  #register {
+    @media (max-width: $screen-sm-min){
+      display: block;
+      width: 80%;
+      margin: 2px auto;
+    }
+    .no-mediaqueries & {
+      display: block;
+      float: right;
+      margin-right: 5%;
+      height: $navbar-height - 30;
+      text-align: center;
+    }
+  }
+}
