@@ -3,9 +3,9 @@
   border-bottom: 10px solid $pomegranate;
   background-color: #ddd;
   .cssvminunit & {
-    $height: 95vmin;
-    min-height: $height;
-    padding-top: $height - 60;
+    $headline-height: 95vmin;
+    min-height: $headline-height;
+    padding-top: $headline-height - 60;
   }
   .no-cssvminunit & {
     padding-top: 18em;
