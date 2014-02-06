@@ -32,7 +32,9 @@
         @include span-columns(8);
       }
       .no-cssvminunit & {
-        @include span-columns(12);
+        padding: 0.5em;
+        @include span-columns(10);
+        @include shift(1);
       }
     }
   }
