@@ -1,4 +1,5 @@
 #description-unit {
+  @include header-style;
   background-color: #F8F7F3;
   border-bottom: 10px solid $emerald;
   .cssvminunit & {
