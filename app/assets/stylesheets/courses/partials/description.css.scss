@@ -28,6 +28,7 @@
     }
     #description-text {
       padding: 2px 15px;
+      padding-bottom: 10px;
       .cssvminunit & {
         @include span-columns(8);
       }
