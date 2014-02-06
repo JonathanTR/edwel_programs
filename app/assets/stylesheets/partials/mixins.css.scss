@@ -1,6 +1,32 @@
+@mixin letterpress(){
+  text-shadow: 0px 1px 2px transparentize(#eee, 0.5);
+}
+
 @mixin header-style(){
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', Helvetica, Sans-Serif;
+    @include letterpress;
     color: $charcoal;
+  }
+}
+
+@mixin vertical-fill($view-height: 100){
+  .cssvminunit & {
+    min-height: #{$view-height}vmin;
+  }
+  // for versions of IE without vertical height
+  .no-cssvminunit & {
+    height: 6px * $view-height;
+  }
+}
+
+@mixin vertical-position($view-height: 100, $margin-top: 0, $margin-bottom: 0){
+  .cssvminunit & {
+    margin-top: #{$margin-top}vmin;
+    height: #{$view-height - $margin-top - $margin-bottom}vmin;
+  }
+  .no-cssvminunit & {
+    margin-top: 0% + $margin-top;
+    min-height: (100% - $margin-top - $margin-bottom);
   }
 }
