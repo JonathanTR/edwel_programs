@@ -16,12 +16,13 @@
     padding-top: 20%;
   }
   #approach-card {
-    @include span-columns(6);
-    @include shift(3);
     padding: 0 2em;
     background-color: $green_sea;
     border-radius: 10px 10px 0 0;
     color: $clouds;
+    @include header-style;
+    @include span-columns(6);
+    @include shift(3);
     .cssvminunit & {
       height: $approach-height - 10;
     }
@@ -29,9 +30,5 @@
       height: 150%;
     }
     font-size: 1.2em;
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Montserrat', Helvetica, Sans-Serif;
-      color: $charcoal;
-    }
   }
 }
