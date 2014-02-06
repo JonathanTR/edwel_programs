@@ -1,5 +1,6 @@
 #description-unit {
   background-color: #F8F7F3;
+  border-bottom: 10px solid $emerald;
   .cssvminunit & {
     $description-height: 90vmin;
     min-height: $description-height;
@@ -9,7 +10,7 @@
     height: 600px;
     padding: auto 0;
   }
-  #card{
+  #description-card{
     @include outer-container;
     background-color: $sunflower;
     border-radius: 5px;
@@ -28,11 +29,14 @@
     }
     #description-text {
       padding: 2px 15px;
+      padding-bottom: 10px;
       .cssvminunit & {
         @include span-columns(8);
       }
       .no-cssvminunit & {
-        @include span-columns(12);
+        padding: 0.5em;
+        @include span-columns(10);
+        @include shift(1);
       }
     }
   }
