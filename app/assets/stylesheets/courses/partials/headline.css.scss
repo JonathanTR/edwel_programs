@@ -1,0 +1,27 @@
+#headline-unit {
+  text-align: center;
+  border-bottom: 10px solid $pomegranate;
+  background-color: #ddd;
+  .cssvminunit & {
+    $headline-height: 95vmin;
+    min-height: $headline-height;
+    padding-top: $headline-height - 60;
+  }
+  .no-cssvminunit & {
+    padding-top: 18em;
+    padding-bottom: 24em;
+  }
+  background: url('background.png');
+  .backgroundsize & {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 5em;
+    font-family: 'Alegreya', Serif;
+  }
+  h4 {
+    margin: 3em;
+  }
+}
