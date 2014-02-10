@@ -1,43 +1,56 @@
 #description-unit {
   @include fallback-height;
-  background-color: $sunflower;
-  @include media($tablet){
-    background-color: #F8F7F3;
+  .no-mediaqueries & {
+      background-color: #F8F7F3;
   }
-  @include media($screen){
-    background-color: #F8F7F3;
-  }
-  .container {
-    @include outer-container;
-    #description-card {
-      @include clearfix;
-      zoom: 1; // IE 7,8 clearfix
-      height: 20%;
-      margin-top: 15%;
-      border-radius: 10px;
-      background-color: $sunflower;
-      #description-text {
-        padding: 2%;
-        @include header-style;
-        @include media($screen){
-          .display-table & {
-            @include span-columns(8);
-          }
-        }
-      }
-      .image-cropper {
-        @include span-columns(4);
-        border-radius: 0px 10px 10px 0px;
-        overflow: hidden;
-        display: none;
-        .no-display-table & {
-          display: none;
-        }
-        @include media($screen){
-          display: inline;
-        }
-      }
+  .mediaqueries & {
+    background-color: $sunflower;
+    @include media($tablet){
+      background-color: #F8F7F3;
+    }
+    @include media($screen){
+      background-color: #F8F7F3;
     }
   }
   @include divider($emerald);
+}
+
+.container {
+  @include outer-container;
+}
+
+#description-card {
+  @include clearfix;
+  zoom: 1; // IE 7,8 clearfix
+  height: 20%;
+  margin-top: 15%;
+  border-radius: 10px;
+  background-color: $sunflower;
+  .no-mediaqueries & {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+#description-text {
+  padding: 2%;
+  @include header-style;
+  @include media($screen){
+    .display-table & {
+      @include span-columns(8);
+    }
+  }
+}
+
+.image-cropper {
+  @include span-columns(4);
+  border-radius: 0px 10px 10px 0px;
+  overflow: hidden;
+  display: none;
+  .no-display-table & {
+    display: none;
+  }
+  @include media($screen){
+    display: inline;
+  }
 }
