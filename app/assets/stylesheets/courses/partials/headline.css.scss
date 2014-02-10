@@ -1,12 +1,17 @@
-
-
 #headline-unit {
+  @include fallback-height;
   @include fancy-bg("background.png", #F8F7F3);
   text-align: center;
   h1 {
     margin-top: 20%;
     font-family: "Alegreya", Georgia, Serif;
-    font-size: 6em;
+    font-size: 4em;
+    @include media($tablet){
+      font-size: 5em;
+    }
+    @include media($screen){
+      font-size: 6em;
+    }
   }
   h4 {
     margin-top: 2em;

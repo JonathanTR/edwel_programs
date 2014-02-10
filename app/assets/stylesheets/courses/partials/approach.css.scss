@@ -1,4 +1,5 @@
 #approach-unit {
+  @include fallback-height;
   @include fancy-bg("background.png", #F8F7F3);
   padding-bottom: 1em;
 }
