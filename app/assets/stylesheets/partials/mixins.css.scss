@@ -4,29 +4,22 @@
 
 @mixin header-style(){
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', Helvetica, Sans-Serif;
     @include letterpress;
+    font-family: 'Montserrat', Helvetica, Sans-Serif;
     color: $charcoal;
   }
 }
 
-@mixin vertical-fill($view-height: 100){
-  .cssvminunit & {
-    min-height: #{$view-height}vmin;
+@mixin fancy-bg($image-name, $fallback-color){
+  background: url($image-name);
+  .backgroundsize & {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  // for versions of IE without vertical height
-  .no-cssvminunit & {
-    height: 6px * $view-height;
-  }
+  background-color: $fallback-color;
 }
 
-@mixin vertical-position($view-height: 100, $margin-top: 0, $margin-bottom: 0){
-  .cssvminunit & {
-    margin-top: #{$margin-top}vmin;
-    height: #{$view-height - $margin-top - $margin-bottom}vmin;
-  }
-  .no-cssvminunit & {
-    margin-top: 0% + $margin-top;
-    min-height: (100% - $margin-top - $margin-bottom);
-  }
+@mixin divider($color){
+  border-bottom: 10px solid $color
 }
