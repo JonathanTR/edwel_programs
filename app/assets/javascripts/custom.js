@@ -1,5 +1,7 @@
 fitSectionsToWindow = function(){
-  $('section').height($(window).height() * 0.9)
+  if ($('section').height() < ($(window).height() * 0.9)){
+    $('section').height($(window).height() * 0.9)
+  }
 }
 
 $(document).ready(function(){
