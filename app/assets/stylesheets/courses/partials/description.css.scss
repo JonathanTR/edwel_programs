@@ -1,36 +1,3 @@
 #description-unit {
-  @include header-style;
   background-color: #F8F7F3;
-  border-bottom: 10px solid $emerald;
-  @include vertical-fill(90);
-  #description-card{
-    @include outer-container;
-    background-color: $sunflower;
-    border-radius: 5px;
-    font-size: 1.2em;
-    .no-cssvminunit & {
-      margin: 15% auto 25%;
-    }
-    .image-cropper {
-      height: 100%;
-      overflow: hidden;
-      border-radius: 0px 5px 5px 0px;
-      @include span-columns(4);
-      .no-cssvminunit & {
-        display: none;
-      }
-    }
-    #description-text {
-      padding: 2px 15px;
-      padding-bottom: 10px;
-      .cssvminunit & {
-        @include span-columns(8);
-      }
-      .no-cssvminunit & {
-        padding: 0.5em;
-        @include span-columns(10);
-        @include shift(1);
-      }
-    }
-  }
 }
