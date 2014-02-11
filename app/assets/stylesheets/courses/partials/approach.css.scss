@@ -1,5 +1,22 @@
 #approach-unit {
   @include fallback-height;
   @include fancy-bg("background.png", #F8F7F3);
-  padding-bottom: 1em;
+  .container {
+    height: 100%;
+  }
+}
+#approach-card {
+  @include header-style;
+  margin-top: 10%;
+  height: 90%;
+  padding: 2%;
+  font-family: $text-font;
+  font-size: 1.35em;
+  color: $charcoal;
+  @include media($tablet){
+    width: 80%;
+    margin: 10% auto;
+    background-color: transparentize($green_sea, 0.3);
+    border-radius: 10px 10px 0 0;
+  }
 }
