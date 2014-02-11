@@ -1,7 +1,12 @@
 @import "partials/typography";
 @import "partials/pallet";
 @import "partials/variables";
+@import "partials/mixins";
 @import "bootstrap";
+
+$mobile: new-breakpoint(min-width $screen-phone 4);
+$tablet: new-breakpoint(min-width $screen-tablet 8);
+$screen: new-breakpoint(min-width $screen-desktop 12);
 
 // IE8 Adjustments
 html, body {
@@ -13,7 +18,6 @@ body {
     padding-top: ($navbar-height / 2) - 22;
   }
 }
-
 @import "partials/navbar";
 @import "courses/custom";
 @import "partials/footer";
