@@ -1,6 +1,7 @@
 #approach-unit {
-  @include fallback-height;
+  @include fallback-height();
   @include fancy-bg("background.png", #F8F7F3);
+  overflow: auto;
   .container {
     height: 100%;
   }
