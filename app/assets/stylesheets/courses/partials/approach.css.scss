@@ -1,37 +1,23 @@
 #approach-unit {
-  $approach-height: 90vmin;
-  background: url('background.png');
-  .backgroundsize & {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  @include fallback-height();
+  @include fancy-bg("background.png", #F8F7F3);
+  overflow: auto;
+  .container {
+    height: 100%;
   }
-  background-color: #F8F7F3;
-  .cssvminunit & {
-    min-height: $approach-height;
-    padding-top: $approach-height - 80;
-  }
-  .no-cssvminunit & {
-    height: 600px;
-    padding-top: 20%;
-  }
-  #approach-card {
-    @include span-columns(6);
-    @include shift(3);
-    padding: 0 2em;
-    background-color: $green_sea;
+}
+#approach-card {
+  @include header-style;
+  margin-top: 10%;
+  height: 90%;
+  padding: 2%;
+  font-family: $text-font;
+  font-size: 1.35em;
+  color: $charcoal;
+  @include media($tablet){
+    width: 80%;
+    margin: 10% auto;
+    background-color: transparentize($green_sea, 0.3);
     border-radius: 10px 10px 0 0;
-    color: $clouds;
-    .cssvminunit & {
-      height: $approach-height - 10;
-    }
-    .no-cssvminunit & {
-      height: 150%;
-    }
-    font-size: 1.2em;
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Montserrat', Helvetica, Sans-Serif;
-      color: $charcoal;
-    }
   }
 }

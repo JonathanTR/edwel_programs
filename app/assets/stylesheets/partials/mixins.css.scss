@@ -1,0 +1,29 @@
+@mixin letterpress(){
+  text-shadow: 0px 1px 2px transparentize(#eee, 0.5);
+}
+
+@mixin header-style(){
+  h1, h2, h3, h4, h5, h6 {
+    @include letterpress;
+    font-family: 'Montserrat', Helvetica, Sans-Serif;
+    color: $charcoal;
+  }
+}
+
+@mixin fancy-bg($image-name, $fallback-color){
+  background: url($image-name);
+  .backgroundsize & {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  background-color: $fallback-color;
+}
+
+@mixin divider($color){
+  border-bottom: 10px solid $color
+}
+
+@mixin fallback-height(){
+  min-height: 600px;
+}

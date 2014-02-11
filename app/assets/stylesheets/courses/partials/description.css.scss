@@ -1,43 +1,59 @@
 #description-unit {
-  background-color: #F8F7F3;
-  border-bottom: 10px solid $emerald;
-  .cssvminunit & {
-    $description-height: 90vmin;
-    min-height: $description-height;
-    padding-top: $description-height - 70;
+  @include fallback-height;
+  .no-mediaqueries & {
+      background-color: #F8F7F3;
   }
-  .no-cssvminunit & {
-    height: 600px;
-    padding: auto 0;
-  }
-  #description-card{
-    @include outer-container;
+  .mediaqueries & {
     background-color: $sunflower;
-    border-radius: 5px;
-    font-size: 1.2em;
-    .no-cssvminunit & {
-      margin: 20% auto;
+    @include media($tablet){
+      background-color: #F8F7F3;
     }
-    .image-cropper {
-      height: 100%;
-      overflow: hidden;
-      border-radius: 0px 5px 5px 0px;
-      @include span-columns(4);
-      .no-cssvminunit & {
-        display: none;
-      }
+    @include media($screen){
+      background-color: #F8F7F3;
     }
-    #description-text {
-      padding: 2px 15px;
-      padding-bottom: 10px;
-      .cssvminunit & {
-        @include span-columns(8);
-      }
-      .no-cssvminunit & {
-        padding: 0.5em;
-        @include span-columns(10);
-        @include shift(1);
-      }
+  }
+  @include divider($emerald);
+}
+
+.container {
+  @include outer-container;
+}
+
+#description-card {
+  @include clearfix;
+  zoom: 1; // IE 7,8 clearfix
+  height: 20%;
+  margin-top: 15%;
+  border-radius: 10px;
+  background-color: $sunflower;
+  .no-mediaqueries & {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+#description-text {
+  padding: 0 2% 0 2%;
+  font-family: $text-font;
+  font-size: 1.3em;
+  color: $charcoal;
+  @include header-style;
+  @include media($screen){
+    .display-table & {
+      @include span-columns(8);
     }
+  }
+}
+
+.image-cropper {
+  @include span-columns(4);
+  border-radius: 0px 10px 10px 0px;
+  overflow: hidden;
+  display: none;
+  .no-display-table & {
+    display: none;
+  }
+  @include media($screen){
+    display: inline;
   }
 }
