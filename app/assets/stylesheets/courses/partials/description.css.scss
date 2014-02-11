@@ -33,7 +33,10 @@
 }
 
 #description-text {
-  padding: 2%;
+  padding: 0 0 0 2%;
+  font-family: $text-font;
+  font-size: 1.3em;
+  color: $charcoal;
   @include header-style;
   @include media($screen){
     .display-table & {
