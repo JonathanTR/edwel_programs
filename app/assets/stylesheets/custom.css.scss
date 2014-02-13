@@ -12,6 +12,7 @@ $screen: new-breakpoint(min-width $screen-desktop 12);
 html, body {
   height: 100%;
   font-size: 14px;
+  background-color: $cream;
 }
 body {
   .no-cssvminunit & {
