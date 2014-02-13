@@ -1,18 +1,18 @@
 #description-unit {
   @include fallback-height;
   .no-mediaqueries & {
-      background-color: #F8F7F3;
+      background-color: $cream;
   }
   .mediaqueries & {
     background-color: $sunflower;
     @include media($tablet){
-      background-color: #F8F7F3;
+      background-color: $cream;
     }
     @include media($screen){
-      background-color: #F8F7F3;
+      background-color: $cream;
     }
   }
-  @include divider($emerald);
+  @include divider($dusty_rusty);
 }
 
 .container {
