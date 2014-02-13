@@ -1,8 +1,1 @@
-<title>
-  Edwel
-<% if @course %>
-| <%= @course.title %>
-<% elsif @location %>
-| <%= @location.name %>
-<% end %>
-</title>
+<title><% if @course %><%= @course.title %> | <% end %><% if @location %><%= @location.name %> | <% end %>EdWel Programs</title>
