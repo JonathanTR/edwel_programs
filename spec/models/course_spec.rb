@@ -5,4 +5,5 @@ describe Course do
   it { should validate_uniqueness_of :title}
   it { should have_and_belong_to_many(:locations) }
   it { should have_many(:seminars) }
+  it { should have_many(:content_blocks) }
 end

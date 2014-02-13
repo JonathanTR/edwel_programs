@@ -6,4 +6,5 @@ class Course < ActiveRecord::Base
   validates_uniqueness_of :title
   has_and_belongs_to_many :locations
   has_many :seminars
+  has_many :content_blocks
 end

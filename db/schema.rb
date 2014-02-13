@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206072152) do
+ActiveRecord::Schema.define(version: 20140213214729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,11 @@ ActiveRecord::Schema.define(version: 20140206072152) do
     t.string   "storage_format"
     t.string   "storage_mime_type"
     t.string   "storage_size"
+  end
+
+  create_table "content_blocks", force: true do |t|
+    t.integer "course_id"
+    t.text    "content"
   end
 
   create_table "courses", force: true do |t|
