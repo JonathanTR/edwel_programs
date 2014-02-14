@@ -20,3 +20,9 @@
   width: 97.75% !important;
 }
 
+.boolean.input.optional {
+  padding-left: 90%;
+  label {
+    color: red;
+  }
+}

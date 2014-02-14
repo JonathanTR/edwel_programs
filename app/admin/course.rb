@@ -4,7 +4,7 @@ ActiveAdmin.register Course do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :id, :title, :tagline, :description, :approach, {location_ids: [], content_blocks: []}, content_blocks_attributes: [:content, :_destroy]
+  permit_params :id, :title, :tagline, :description, :approach, {location_ids: [], content_blocks: []}, content_blocks_attributes: [:id, :content, :_destroy]
 
   controller do
     def find_resource
@@ -31,6 +31,10 @@ ActiveAdmin.register Course do
       f.input :tagline
       f.input :description, as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :source], blocks: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
       f.input :approach, as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :source], blocks: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
+      f.has_many :content_blocks do |cb|
+        cb.input :content, label: "HTML5 Editor", as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :source], blocks: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
+        cb.input :_destroy, as: :boolean, label: "Delete"
+      end
     end
     f.actions
   end
