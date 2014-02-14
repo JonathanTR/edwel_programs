@@ -9,5 +9,5 @@ class Course < ActiveRecord::Base
   has_many :seminars
   has_many :content_blocks
 
-  accepts_nested_attributes_for :content_blocks
+  accepts_nested_attributes_for :content_blocks, allow_destroy: true
 end
