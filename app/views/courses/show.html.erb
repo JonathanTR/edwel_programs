@@ -12,10 +12,6 @@
 
 <% if @course.content_blocks %>
   <% @course.content_blocks.each do |block| %>
-    <section>
-      <div class="container">
-        <%= raw block.content %>
-      </div>
-    </section>
+    <%= render "courses/content_block", block: block %>
   <% end %>
 <% end %>
