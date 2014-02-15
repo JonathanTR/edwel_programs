@@ -2,11 +2,11 @@
   <%= render "courses/headline"  %>
 <% end %>
 
-<% unless @course.description == nil %>
+<% unless @course.description == "" %>
   <%=  render "courses/description"  %>
 <% end %>
 
-<% unless @course.approach == nil %>
+<% unless @course.approach == "" %>
   <%=  render "courses/approach"  %>
 <% end %>
 
