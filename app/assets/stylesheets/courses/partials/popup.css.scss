@@ -2,6 +2,8 @@
   @include fancy-bg("background.png", $concrete);
   .container {
     height: 100%;
+    padding-right: 0;
+    padding-left: 0;
     .v-spacer {
       min-height: 50px;
       height: 10%;
