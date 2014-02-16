@@ -1,7 +1,18 @@
+var measurements = function(){
+  console.log('Section:' + $('section').last().outerHeight())
+  console.log('Container:' + $('section .container').last().outerHeight())
+  console.log('Card:' + $('.card').outerHeight())
+  console.log('Expected Margin:' + ($('section').last().outerHeight() - $('.card').outerHeight()))
+  console.log('Computed Margin:' + $('.v-spacer').outerHeight())
+}
+
 var fitSectionsToWindow = function(){
-  if ($('section').height() < ($(window).height() * 0.9)){
-    $('section').height($(window).height() * 0.9)
-  }
+  var sections = $('section')
+  sections.each(function(){
+    if ($(this).height() < ($(window).height() * 0.9)){
+      $(this).height($(window).height() * 0.9)
+    }
+  })
 }
 
 var tempNavbarFix = function(){

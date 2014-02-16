@@ -23,7 +23,3 @@
 @mixin divider($color){
   border-bottom: 10px solid $color
 }
-
-@mixin fallback-height(){
-  min-height: 600px;
-}
