@@ -3,3 +3,19 @@
 @import "partials/popup";
 @import "partials/default";
 @import "partials/card-styles";
+
+.glyphicon.glyphicon-circle-arrow-down.navigator {
+  // IE fix
+  zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe134;');
+  position: fixed;
+  top: 85%;
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  .no-opacity & {
+    color: $concrete;
+  }
+  .opacity & {
+    color: transparentize($almost_black, 0.5);
+  }
+}
