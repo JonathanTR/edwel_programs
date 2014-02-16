@@ -2,6 +2,7 @@
 @import "partials/pallet";
 @import "partials/variables";
 @import "partials/mixins";
+@import "partials/texture-mixin";
 @import "bootstrap";
 
 $mobile: new-breakpoint(min-width $screen-phone 4);
@@ -12,7 +13,8 @@ $screen: new-breakpoint(min-width $screen-desktop 12);
 html, body {
   height: 100%;
   font-size: 14px;
-  background-color: $cream;
+  background-color: $clouds;
+  @include texture($clouds, 2, 0);
 }
 body {
   .no-cssvminunit & {

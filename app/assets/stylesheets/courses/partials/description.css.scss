@@ -1,14 +1,17 @@
 #description-unit {
   .no-mediaqueries & {
-      background-color: $cream;
+      background-color: $clouds;
+      @include texture($clouds, 2, 0);
   }
   .mediaqueries & {
     background-color: $sunflower;
     @include media($tablet){
-      background-color: $cream;
+      background-color: $clouds;
+      @include texture($clouds, 2, 0);
     }
     @include media($screen){
-      background-color: $cream;
+      background-color: $clouds;
+      @include texture($clouds, 2, 0);
     }
   }
   @include divider($dusty_rusty);
@@ -28,6 +31,9 @@
   .no-mediaqueries & {
     @include span-columns(8);
     @include shift(2);
+  }
+  @include media($tablet){
+    @include shadow;
   }
 }
 
