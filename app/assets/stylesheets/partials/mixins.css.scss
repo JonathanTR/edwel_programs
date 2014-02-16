@@ -1,10 +1,10 @@
-@mixin letterpress(){
-  text-shadow: 0px 1px 2px transparentize(#eee, 0.5);
+@mixin letterpress($color){
+  text-shadow: 0px 1px 2px transparentize($color, 0.5);
 }
 
-@mixin header-style(){
+@mixin header-style($letterpress-color: #eee){
   h1, h2, h3, h4, h5, h6 {
-    @include letterpress;
+    @include letterpress($letterpress-color);
     font-family: 'Montserrat', Helvetica, Sans-Serif;
     color: $charcoal;
   }
