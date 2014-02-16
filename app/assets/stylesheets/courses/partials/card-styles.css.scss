@@ -1,0 +1,22 @@
+@mixin card-bg($color){
+  @extend .default;
+  .card {
+    background-color: transparentize($color, 0.1) !important;
+  }
+}
+
+.red-card {
+  @include card-bg($dusty_rusty);
+}
+
+.blue-card {
+  @include card-bg($peter_river);
+}
+
+.yellow-card {
+  @include card-bg($sunflower);
+}
+
+.green-card {
+  @include card-bg($green_sea);
+}
