@@ -6,10 +6,6 @@
   <%=  render "courses/description"  %>
 <% end %>
 
-<% unless @course.approach == "" %>
-  <%=  render "courses/approach"  %>
-<% end %>
-
 <% if @course.content_blocks %>
   <% @course.content_blocks.each do |block| %>
     <%= render "courses/content_block", block: block %>
