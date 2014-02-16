@@ -2,7 +2,7 @@ var measurements = function(){
   console.log('Section:' + $('section').last().outerHeight())
   console.log('Container:' + $('section .container').last().outerHeight())
   console.log('Card:' + $('.card').outerHeight())
-  console.log('Expected Margin:' + ($('section').last().outerHeight() - $('.card').outerHeight()))
+  console.log('Expected Margin:' + ($('section').last().outerHeight() - $('.card').last().outerHeight()))
   console.log('Computed Margin:' + $('.v-spacer').outerHeight())
 }
 
