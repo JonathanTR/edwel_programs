@@ -1,0 +1,28 @@
+.popup {
+  @include fancy-bg("background.png", $concrete);
+  .container {
+    height: 100%;
+    .v-spacer {
+      min-height: 50px;
+      height: 10%;
+    }
+    .card {
+      @include header-style;
+      padding: 5%;
+      min-height: 90%;
+      font-family: $text-font;
+      font-size: 1.35em;
+      color: $charcoal;
+      h2 {
+        margin-top: 0;
+      }
+      @include media($tablet){
+        width: 80%;
+        margin: 0 auto;
+        background-color: transparentize($green_sea, 0.3);
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+  @include divider($dusty_rusty);
+}

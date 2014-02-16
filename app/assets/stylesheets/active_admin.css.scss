@@ -16,7 +16,21 @@
 //
 //   .status_tag { background: #6090DB; }
 
-.wysihtml5-sandbox {
-  width: 97.75% !important;
+label.label {
+  width: 11%;
 }
 
+.string.input input {
+  width: 86%;
+}
+
+.wysihtml5-sandbox {
+  width: 96.75% !important;
+}
+
+.boolean.input.optional {
+  padding-left: 90%;
+  label {
+    color: red;
+  }
+}
