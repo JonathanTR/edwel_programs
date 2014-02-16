@@ -77,7 +77,6 @@ ActiveRecord::Schema.define(version: 20140215211045) do
     t.text     "content"
     t.string   "tagline"
     t.text     "description"
-    t.text     "approach"
   end
 
   add_index "courses", ["slug"], name: "index_courses_on_slug", unique: true, using: :btree
