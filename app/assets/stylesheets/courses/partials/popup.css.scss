@@ -15,13 +15,13 @@
       font-family: $text-font;
       font-size: 1.35em;
       color: $charcoal;
-      h2 {
+      h1, h2, h3, h4, h5, h6 {
         margin-top: 0;
       }
       @include media($tablet){
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
-        background-color: transparentize($green_sea, 0.3);
+        background-color: transparentize($peter_river, 0.3);
         border-radius: 10px 10px 0 0;
       }
     }
