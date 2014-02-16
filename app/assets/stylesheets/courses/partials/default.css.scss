@@ -1,0 +1,31 @@
+.default {
+  .container {
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    .v-spacer {
+      @include media($tablet) {
+        height: 55px;
+        min-height: 10%;
+      }
+    }
+    .card {
+      @include header-style($shark_skin);
+      @include texture($cream, 8, 0);
+      padding: 5%;
+      min-height: 100%;
+      @include media($tablet){
+        min-height: 80%;
+        border-radius: 10px;
+      }
+      .mediaqueries & {
+        @include shadow;
+        background-color: $cream;
+      }
+      h1, h2, h3, h4, h5, h6  {
+        margin-top: 0;
+      }
+    }
+  }
+  @include divider($shark_skin);
+}

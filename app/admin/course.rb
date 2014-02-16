@@ -32,7 +32,7 @@ ActiveAdmin.register Course do
       f.input :description, as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :source], blocks: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
       f.has_many :content_blocks do |cb|
         cb.input :content, label: "HTML5 Editor", as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :source], blocks: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
-        cb.input :style, collection: ["default", "popup"]
+        cb.input :style, collection: ["default", "popup", "red-card", "blue-card", "yellow-card", "green-card"]
         cb.input :_destroy, as: :boolean, label: "Delete"
       end
     end
