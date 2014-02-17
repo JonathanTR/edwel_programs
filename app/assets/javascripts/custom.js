@@ -7,7 +7,17 @@ var getElementTargets = function(selector){
 }
 
 var windowWatcher = function() {
-  console.log(getElementTargets('section'))
+  var targets = getElementTargets('section')
+  $(window).on('scroll', function(){
+    var windowTop = window.scrollY
+    for( var i = 1; i < targets.length; i++ ){
+      var targetTop = targets[i]
+      var margin = targetTop - windowTop
+      if( margin > 0 && margin < 200 ){
+        console.log('Snap!')
+      }
+    }
+  })
 }
 
 var measurements = function(){
