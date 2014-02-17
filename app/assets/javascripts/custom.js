@@ -1,3 +1,15 @@
+var getElementTargets = function(selector){
+  var targets = []
+  $(selector).each(function(){
+    targets.push($(this).offset().top)
+  })
+  return targets
+}
+
+var windowWatcher = function() {
+  console.log(getElementTargets('section'))
+}
+
 var measurements = function(){
   console.log('Section:' + $('section').last().outerHeight())
   console.log('Container:' + $('section .container').last().outerHeight())
@@ -22,9 +34,11 @@ var tempNavbarFix = function(){
   }
 }
 
+
 var ready = function(){
   tempNavbarFix()
   fitSectionsToWindow()
+  windowWatcher()
 }
 
 
