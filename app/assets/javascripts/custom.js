@@ -1,25 +1,3 @@
-var getElementTargets = function(selector){
-  var targets = []
-  $(selector).each(function(){
-    targets.push($(this).offset().top)
-  })
-  return targets
-}
-
-var windowWatcher = function() {
-  var targets = getElementTargets('section')
-  $(window).on('scroll', function(){
-    var windowTop = window.scrollY
-    for( var i = 1; i < targets.length; i++ ){
-      var targetTop = targets[i]
-      var margin = targetTop - windowTop
-      if( margin > 0 && margin < 200 ){
-        console.log('Snap!')
-      }
-    }
-  })
-}
-
 var measurements = function(){
   console.log('Section:' + $('section').last().outerHeight())
   console.log('Container:' + $('section .container').last().outerHeight())
@@ -48,7 +26,7 @@ var tempNavbarFix = function(){
 var ready = function(){
   tempNavbarFix()
   fitSectionsToWindow()
-  windowWatcher()
+  setWindowWatcher()
 }
 
 
