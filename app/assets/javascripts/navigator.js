@@ -20,7 +20,7 @@ var navigation = function(){
   var snap = function(targetTop){
     stopScroll()
     $(window).off()
-    $('html').stop().animate({
+    $('html, body').stop().animate({
       'scrollTop': targetTop
     }, 400, 'swing', function () {
         window.scrollY = targetTop;
