@@ -4,7 +4,7 @@ ActiveAdmin.register Course do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :id, :title, :tagline, :description, :approach, {location_ids: [], content_blocks: []}, content_blocks_attributes: [:id, :content, :style, :_destroy]
+  permit_params :id, :title, :tagline, :description, :approach, {location_ids: [], instructor_ids: [], content_blocks: []}, content_blocks_attributes: [:id, :content, :style, :_destroy]
 
   controller do
     def find_resource
