@@ -13,8 +13,9 @@
 <% end %>
 
 <% if @course.instructors %>
-  <section>
+  <section id="instructors">
     <div class="container">
+      <div class="v-spacer"></div>
       <% @course.instructors.each do |instructor|  %>
         <div class="instructor">
           <%= image_tag instructor.image_url(:display).to_s  %>
