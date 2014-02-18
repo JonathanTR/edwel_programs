@@ -21,12 +21,12 @@ var snap = function(targetTop){
   $(window).off()
   $('html').stop().animate({
     'scrollTop': targetTop
-  }, 300, 'swing', function () {
+  }, 400, 'swing', function () {
       window.scrollY = targetTop;
       setTimeout(function(){
         setWindowWatcher();
         startScroll()
-      }, 1000)
+      }, 850)
   });
 }
 
