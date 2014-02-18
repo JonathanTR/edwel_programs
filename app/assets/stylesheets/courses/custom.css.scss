@@ -7,9 +7,9 @@
 .glyphicon.glyphicon-circle-arrow-down.navigator {
   // IE fix
   zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe134;');
-  position: fixed;
+  position: absolute;
   top: 85%;
-  width: 100%;
+  margin-left: -0.5em;
   text-align: center;
   font-size: 3em;
   .no-opacity & {
