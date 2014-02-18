@@ -22,9 +22,11 @@ var tempNavbarFix = function(){
   }
 }
 
+
 var ready = function(){
   tempNavbarFix()
   fitSectionsToWindow()
+  navigation()
 }
 
 
