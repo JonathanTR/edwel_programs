@@ -1,13 +1,13 @@
 <% unless @course.tagline == "" %>
-  <%= render "courses/headline"  %>
+ <%= render "courses/headline"  %>
 <% end %>
 
 <% unless @course.description == "" %>
-  <%=  render "courses/description"  %>
+ <%=  render "courses/description"  %>
 <% end %>
 
 <% if @course.content_blocks %>
   <% @course.content_blocks.each do |block| %>
-    <%= render "courses/content_block", block: block %>
+   <%= render "courses/content_block", block: block %>
   <% end %>
 <% end %>

@@ -1,4 +1,4 @@
-#description-unit {
+.description-unit {
   .no-mediaqueries & {
       background-color: $clouds;
       @include texture($clouds, 2, 0);

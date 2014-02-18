@@ -3,3 +3,17 @@
 @import "partials/popup";
 @import "partials/default";
 @import "partials/card-styles";
+
+.glyphicon.glyphicon-circle-arrow-down.navigator {
+  position: absolute;
+  top: 85%;
+  margin-left: -0.5em;
+  text-align: center;
+  font-size: 3em;
+  .no-opacity & {
+    color: $concrete;
+  }
+  .opacity & {
+    color: transparentize($almost_black, 0.5);
+  }
+}
