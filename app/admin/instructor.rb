@@ -23,8 +23,9 @@ ActiveAdmin.register Instructor do
     default_actions
   end
 
-  form do |f|
+  form html: { multipart: true } do |f|
     f.inputs do
+      f.input :image, as: :file
       f.input :name
       f.input :courses, as: :check_boxes, input_html: { multiple: true } # add courses input here
       f.input :bio
