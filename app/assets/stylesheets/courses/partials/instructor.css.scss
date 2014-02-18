@@ -1,0 +1,29 @@
+#instructors{
+  @include outer-container;
+  .container {
+    height: 100%;
+  }
+}
+
+.instructor {
+  @include shadow;
+  @include header-style;
+  margin: 1em 0em;
+  height: 36em;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: $cream;
+  font-family: $text-font;
+  font-size: 1.2em;
+  h1, h2, h3, h4, h5, h6, {
+    text-align: center;
+    color: $peter_river;
+  }
+  img {
+    // @include shadow;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+}
