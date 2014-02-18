@@ -28,6 +28,7 @@ ActiveAdmin.register Course do
       f.input :title
       f.input :slug
       f.input :locations, as: :check_boxes, input_html: { multiple: true } # add locations input here
+      f.input :instructors, as: :check_boxes, input_html: { multiple: true } # add locations input here
       f.input :tagline
       f.input :description, as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :source], blocks: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
       f.has_many :content_blocks do |cb|
