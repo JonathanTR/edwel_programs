@@ -14,6 +14,9 @@ gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 gem 'neat'
 
+gem 'rmagick'
+gem 'carrierwave'
+
 group :development do
   gem 'better_errors'
   gem 'sextant'
