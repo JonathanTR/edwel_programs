@@ -1,29 +1,65 @@
-#instructors{
-  @include outer-container;
+#instructors {
+  h1 {
+    @include header-style;
+    @include letterpress($shark_skin);
+    margin: 0 0 0.5em 0.2em;
+  }
   .container {
     height: 100%;
-  }
-}
-
-.instructor {
-  @include shadow;
-  @include header-style;
-  margin: 1em 0em;
-  height: 36em;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: $cream;
-  font-family: $text-font;
-  font-size: 1.2em;
-  h1, h2, h3, h4, h5, h6, {
-    text-align: center;
-    color: $peter_river;
-  }
-  img {
-    // @include shadow;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
+    padding: 0;
+    margin-bottom: 2em;
+    .v-spacer {
+      @include media($tablet) {
+        display: block;
+        height: 27.5px;
+        width: 100%;
+        min-height: 5%;
+      }
+    }
+    .instructor {
+      @include shadow;
+      display: block;
+      height: 40em;
+      padding: 2%;
+      background-color: $cream;
+      @include media($mobile){
+        float: left;
+      }
+      @include media($tablet){
+        display: inline-block;
+        width: 48%;
+        margin: 1% 1%;
+        border-radius: 5px;
+      }
+      @include media($screen){
+        width: (100% / 3) - 3%;
+        margin: 1% 1.5%;
+        height: 50em;
+      }
+      .card {
+        height: 100%;
+        padding: 1em;
+        background-color: lighten($cream, 2%);
+        border: 2px solid darken($cream, 5%);
+        font-family: $text-font;
+        font-size: 1.2em;
+        color: $almost_black;
+        @include header-style;
+        h1, h2, h3, h4, h5, h6 {
+          font-size: 1.5em;
+          color: $peter_river;
+          text-align: center;
+        }
+        img {
+          display: block;
+          margin: 0 auto 1%;
+          border-radius: 50%;
+          border: 3px solid darken($cream, 5%);
+        }
+        @include media($tablet){
+          border-radius: 2px;
+        }
+      }
+    }
   }
 }
