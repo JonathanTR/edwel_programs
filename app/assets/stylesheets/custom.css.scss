@@ -5,9 +5,9 @@
 @import "partials/texture-mixin";
 @import "bootstrap";
 
-$mobile: new-breakpoint(min-width $screen-phone 4);
-$tablet: new-breakpoint(min-width $screen-tablet 8);
-$screen: new-breakpoint(min-width $screen-desktop 12);
+$mobile: new-breakpoint(min-width 480px 4);
+$tablet: new-breakpoint(min-width 768px 8);
+$screen: new-breakpoint(min-width 992px 12);
 
 // IE8 Adjustments
 html, body {
