@@ -14,7 +14,6 @@
     }
     .card {
       @include header-style($shark_skin);
-      @include texture($cream, 8, 0);
       padding: 5%;
       min-height: 100%;
       @include media($tablet){
