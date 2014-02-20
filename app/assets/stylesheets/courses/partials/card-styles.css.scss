@@ -1,5 +1,15 @@
 @mixin card-bg($color){
   @extend .default;
+  @include media($mobile-sm){
+    .mediaqueries & {
+      background-color: $color;
+    }
+  }
+  .container {
+    .no-mediaqueries & {
+      background-color: $color;
+    }
+  }
   .card {
     @include media($tablet){
       background-color: transparentize($color, 0.1) !important;
