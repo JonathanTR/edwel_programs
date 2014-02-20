@@ -3,6 +3,9 @@
     height: 100%;
     padding-left: 0;
     padding-right: 0;
+    .no-mediaqueries & {
+      background-color: $cream;
+    }
     .v-spacer {
       @include media($tablet) {
         height: 55px;
@@ -20,10 +23,13 @@
       }
       .mediaqueries & {
         @include shadow;
-        background-color: $cream;
       }
       h1, h2, h3, h4, h5, h6  {
         margin-top: 0;
+      }
+      @include media($tablet){
+        @include texture($cream, 8, 0);
+        background-color: $cream;
       }
     }
   }

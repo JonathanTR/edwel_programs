@@ -1,7 +1,9 @@
 @mixin card-bg($color){
   @extend .default;
   .card {
-    background-color: transparentize($color, 0.1) !important;
+    @include media($tablet){
+      background-color: transparentize($color, 0.1) !important;
+    }
   }
 }
 
