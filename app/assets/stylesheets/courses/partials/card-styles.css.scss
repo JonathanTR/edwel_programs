@@ -2,7 +2,7 @@
   @extend .default;
   @include media($mobile-sm){
     .mediaqueries & {
-      background-color: $color;
+      background-color: lighten($color, 10%);
     }
   }
   .container {
