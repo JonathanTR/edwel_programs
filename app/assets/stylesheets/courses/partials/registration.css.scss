@@ -4,7 +4,9 @@
 }
 
 #registration {
+  @include texture(lighten($peter_river, 5%), 2, 0);
   @include header-style;
+  padding-top: 2em;
   form {
     #registration-submit {
       @include linear-gradient($emerald, $nephritis);
@@ -13,8 +15,8 @@
       text-shadow: none;
       border-radius: 5px;
       border: none;
-      border-bottom: 2px solid darken($nephritis, 10%);
       background-color: $nephritis;
+      border-bottom: 2px solid darken($nephritis, 10%);
       color: white;
       font-size: 1.3em;
       font-family: $header-font;
