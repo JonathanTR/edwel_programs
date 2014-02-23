@@ -1,3 +1,8 @@
+@mixin message-box($color){
+  border: 1px solid $color;
+  background-color: lighten($color, 20%);
+}
+
 #registration {
   @include header-style;
 }
@@ -14,13 +19,15 @@
   }
 }
 
+.waiting {
+  @include message-box($peter_river);
+}
+
 .success {
   font-size: 1.2em;
-  border: 1px solid $emerald;
-  background-color: lighten($emerald, 20%);
+  @include message-box($emerald);
 }
 
 .error {
-  border: 1px solid $pomegranate;
-  background-color: lighten($pomegranate, 20%);
+  @include message-box($pomegranate);
 }
