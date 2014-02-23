@@ -1,0 +1,26 @@
+#registration {
+  @include header-style;
+}
+
+.registration-message {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    width: 70%;
+    margin: 2px;
+    border-radius: 3px;
+    padding: 0.2em 0.5em;
+    color: $almost_black;
+  }
+}
+
+.success {
+  font-size: 1.2em;
+  border: 1px solid $emerald;
+  background-color: lighten($emerald, 20%);
+}
+
+.error {
+  border: 1px solid $pomegranate;
+  background-color: lighten($pomegranate, 20%);
+}
