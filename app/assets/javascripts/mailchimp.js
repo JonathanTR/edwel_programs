@@ -1,7 +1,8 @@
 var addRegistrationHandler = function(){
   $('form#mailchimp')
     .bind("ajax:beforeSend", function(){
-      $('div#response').text( "Adding Email...." );
+      var waitingMessage = "<ul class='registration-message'><li class='waiting'>" + "Submitting Registration" + "</li></ul>"
+      $('div#response').html(waitingMessage);
     })
     .bind("ajax:success", function(evt, data){
       console.log(data.message)
