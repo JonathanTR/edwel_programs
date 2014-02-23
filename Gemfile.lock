@@ -116,6 +116,7 @@ GEM
       multi_json (~> 1.0)
       rack
     erubis (2.7.0)
+    excon (0.28.0)
     execjs (2.0.2)
     factory_girl (4.3.0)
       activesupport (>= 3.0.0)
@@ -149,6 +150,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailchimp-api (2.0.0)
+      excon (>= 0.16.0)
+      json (>= 1.7.7)
     mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
@@ -263,6 +267,7 @@ DEPENDENCIES
   faker
   friendly_id (~> 5.0.0)
   jquery-rails
+  mailchimp-api
   neat
   pg
   rails (= 4.0.1)
