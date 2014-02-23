@@ -17,11 +17,11 @@ var addRegistrationHandler = function(){
         errors = {message: "There were errors with the submission."}
       }
       errorText = "Please reload the page and try again."
-      errorList = "<ul>"
+      errorList = "<ul class='registration-message'>"
       for ( error in errors ) {
-        errorList += "<li>" + error + ': ' + errors[error] + "</li> "
+        errorList += "<li class='error'>" + errors[error] + "</li> "
       }
-      errorList += "<li>" + errorText + "</li> "
+      errorList += "<li class='error'>" + errorText + "</li> "
       errorList += "</ul>"
       $('div#response').html(errorList)
     })
