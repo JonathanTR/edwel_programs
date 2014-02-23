@@ -13,7 +13,7 @@ var addRegistrationHandler = function(){
       var errorList, errorText
       try{
         var errors = $.parseJSON(data.responseText)
-      }.catch(err){
+      }catch(err){
         errors = {message: "There were errors with the submission."}
       }
       errorText = "Please reload the page and try again."
