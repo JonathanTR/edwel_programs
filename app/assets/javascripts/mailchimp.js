@@ -5,7 +5,8 @@ var addRegistrationHandler = function(){
     })
     .bind("ajax:success", function(evt, data){
       console.log(data.message)
-      $('div#response').html(data.message)
+      var successMessage = "<ul class='registration-message'><li class='success'>" + data.message + "</li></ul>"
+      $('div#response').html(successMessage)
       $('input#email').val("")
     })
     .bind("ajax:error", function(evt, data){
