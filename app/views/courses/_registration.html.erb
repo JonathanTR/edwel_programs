@@ -4,7 +4,7 @@
     <div id="response"></div>
       <%= form_tag('/mailchimp/subscribe', method: "post", id: "mailchimp", remote: "true") do -%>
       <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
-      <%= submit_tag("Register") %>
+      <%= submit_tag "Register", id: 'registration-submit' %>
     <% end %>
   </div>
 </section>

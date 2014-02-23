@@ -5,6 +5,25 @@
 
 #registration {
   @include header-style;
+  form {
+    #registration-submit {
+      @include linear-gradient($emerald, $nephritis);
+      margin: 0;
+      padding: 0.5em;
+      text-shadow: none;
+      border-radius: 5px;
+      border: none;
+      border-bottom: 2px solid darken($nephritis, 10%);
+      background-color: $nephritis;
+      color: white;
+      font-size: 1.3em;
+      font-family: $header-font;
+      &:hover {
+        background-color: lighten ($nephritis, 5%);
+        @include linear-gradient(lighten($emerald, 5%), lighten($nephritis, 5%));
+      }
+    }
+  }
 }
 
 .registration-message {
