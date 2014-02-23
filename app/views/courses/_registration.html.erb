@@ -1,0 +1,10 @@
+<section id="registration">
+  <div class="container">
+    <h1>Register for a class</h1>
+    <div id="response"></div>
+      <%= form_tag('/mailchimp/subscribe', method: "post", id: "mailchimp", remote: "true") do -%>
+      <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+      <%= submit_tag("Register") %>
+    <% end %>
+  </div>
+</section>
