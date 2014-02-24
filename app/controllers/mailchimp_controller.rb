@@ -11,6 +11,8 @@ class MailchimpController < ApplicationController
         render json: { message: "Thank you for registering. A representative will be in touch with shortly to answer your questions."}.to_json
       rescue Mailchimp::ListAlreadySubscribedError 
         format.json{render :json => {:message => "#{email} is already subscribed to the list"}}
+      rescue Mailchimp::ListMergeFieldRequiredError
+        format.json{render :json => {:message => "Please fill out all the required fields"}}
       rescue Mailchimp::Error => ex
         if ex.message
           puts '*' * 800
