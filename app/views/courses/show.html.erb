@@ -12,22 +12,8 @@
   <% end %>
 <% end %>
 
-<% if @course.instructors %>
-  <section id="instructors">
-    <div class="container">
-      <div class="v-spacer"></div>
-      <h1>Meet Your Instructors:</h1>
-      <% @course.instructors.each do |instructor|  %>
-        <div class="instructor">
-          <div class="card">
-            <%= image_tag instructor.image_url(:display).to_s  %>
-            <h4><%= instructor.name  %></h4>
-            <p><%= instructor.bio  %></p>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </section>
+<% unless @course.instructors.empty? %>
+  <%= render "courses/instructors"  %>
 <% end %>
 
 <%= render "courses/registration" %>
