@@ -1,7 +1,7 @@
-var displayError = function(message){
+var displayMessage = function(message, type){
   $('div#response').slideUp(400, function(){
-    var errorMessage = "<ul class='registration-message'><li class='error'>" + message + "</li></ul>"
-    $('div#response').html(errorMessage);
+    var display = "<ul class='registration-message'><li class='" + type + "'>" + message + "</li></ul>"
+    $('div#response').html(display);
     $('div#response').slideDown();
   });
 }
@@ -35,19 +35,19 @@ var addRegistrationValidator = function(){
     e.preventDefault()
     switch(true){
       case firstNameEmpty():
-        displayError('Please provide a first name.')
+        displayMessage('Please provide a first name.', 'error')
         break
       case lastNameEmpty():
-        displayError('Please provide a last name.')
+        displayMessage('Please provide a last name.', 'error')
         break
       case emailEmpty():
-        displayError('Please provide an email address.')
+        displayMessage('Please provide an email address.', 'error')
         break
       case emailInvalid():
-        displayError('Please provide a <strong>valid</strong> email address.')
+        displayMessage('Please provide a <strong>valid</strong> email address.', 'error')
         break
       case phoneEmpty():
-        displayError('Please provide a phone number.')
+        displayMessage('Please provide a phone number.', 'error')
         break
       default: 
         $('form').submit()
@@ -59,8 +59,7 @@ var addRegistrationValidator = function(){
 var addRegistrationHandler = function(){
   $('form#mailchimp')
     .bind("ajax:beforeSend", function(){
-      var waitingMessage = "<ul class='registration-message'><li class='waiting'>" + "Submitting Registration" + "</li></ul>"
-      $('div#response').html(waitingMessage);
+      displayMessage('...submitting registration', 'waiting')
     })
     .bind("ajax:success", function(evt, data){
       console.log(data.message)
