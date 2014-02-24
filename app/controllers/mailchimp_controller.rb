@@ -5,6 +5,7 @@ class MailchimpController < ApplicationController
     phone = params[:phone][:number]
     if !email.blank?
       begin
+        Notifier.registration_request(email, phone).deliver
         @mailchimp.lists.subscribe(@list_id, {'email' => email}, {}, 'html', false)
         render json: { message: "Thank you for registering. A representative will be in touch with you shortly to discuss class details and answer your questions."}.to_json
         Notifier.registration_request('jonathan.d.reilly@gmail.com').deliver
