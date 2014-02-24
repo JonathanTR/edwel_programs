@@ -44,7 +44,7 @@ var addRegistrationValidator = function(){
         displayError('Please provide an email address.')
         break
       case emailInvalid():
-        displayError('Please provide a valid email address.')
+        displayError('Please provide a <strong>valid</strong> email address.')
         break
       case phoneEmpty():
         displayError('Please provide a phone number.')
