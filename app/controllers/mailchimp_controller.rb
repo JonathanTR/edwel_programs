@@ -2,6 +2,7 @@ class MailchimpController < ApplicationController
 
   def subscribe
     email = params[:email][:address]
+    phone = params[:phone][:number]
     if !email.blank?
       begin
         @mailchimp.lists.subscribe(@list_id, {'email' => email}, {}, 'html', false)
