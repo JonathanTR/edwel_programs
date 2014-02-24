@@ -69,7 +69,7 @@ var addRegistrationHandler = function(){
       $('input#email').val("")
       $('input#phone').val("")
       $('input#company').val("")
-      $('input#message').val("")
+      $('textarea#message').val("")
     })
     .bind("ajax:error", function(evt, data){
       var error

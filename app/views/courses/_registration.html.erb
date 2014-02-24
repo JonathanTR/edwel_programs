@@ -1,3 +1,4 @@
+
 <section id="registration">
   <div class="container">
     <h1>Register for a class</h1>
@@ -10,7 +11,7 @@
     <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
     <%= telephone_field(:phone, :number, {id: "phone", placeholder: "phone number"}) %>
     <%= text_field(:company, :name, {id: "company", placeholder: "company name"}) %>
-    <%= text_area(:message, :text, {id: "company", placeholder: "anything else you'd like us to know?"}) %>
+    <%= text_area(:message, :text, {id: "message", placeholder: "anything else you'd like us to know?"}) %>
     <%= submit_tag "Register", id: 'registration-submit' %>
     <% end %>
   </div>
