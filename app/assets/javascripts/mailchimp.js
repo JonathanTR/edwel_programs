@@ -1,8 +1,9 @@
 var displayMessage = function(message, type){
-  $('div#response').slideUp(400, function(){
-    var display = "<ul class='registration-message'><li class='" + type + "'>" + message + "</li></ul>"
-    $('div#response').html(display);
-    $('div#response').slideDown();
+  var $messages = $('#response #messages')
+  $messages.slideUp(400, function(){
+    var display = "<li class='" + type + "'>" + message + "</li>"
+    $messages.html(display);
+    $messages.slideDown();
   });
 }
 
