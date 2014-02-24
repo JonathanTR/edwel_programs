@@ -8,9 +8,14 @@
   @include header-style;
   padding-top: 2em;
   form {
+    input, textarea {
+      margin: 0.2em;
+    }
     #registration-submit {
       @include linear-gradient($emerald, $nephritis);
-      margin: 0;
+      display: block;
+      margin-top: 0.2em;
+      margin-left: 64%;
       padding: 0.5em;
       text-shadow: none;
       border-radius: 5px;
