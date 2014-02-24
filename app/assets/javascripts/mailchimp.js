@@ -72,20 +72,13 @@ var addRegistrationHandler = function(){
       $('input#message').val("")
     })
     .bind("ajax:error", function(evt, data){
-      var errorList, errorText
+      var error
       try{
-        var errors = $.parseJSON(data.responseText)
+        error = data.message
       }catch(err){
-        errors = {message: "There were errors with the submission."}
+        error = "Sorry, it looks like there were errors with the submission. Please call our toll free number and we'll be sure to resolve your questions."
       }
-      errorText = "Please reload the page and try again."
-      errorList = "<ul class='registration-message'>"
-      for ( error in errors ) {
-        errorList += "<li class='error'>" + errors[error] + "</li> "
-      }
-      errorList += "<li class='error'>" + errorText + "</li> "
-      errorList += "</ul>"
-      $('div#response').html(errorList)
+      displayMessage(error, 'error')
     })
 }
 
