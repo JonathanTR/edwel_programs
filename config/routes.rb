@@ -8,5 +8,6 @@ EdwelPrograms::Application.routes.draw do
     resources :courses, only: [:show], path: '', as: :course
   end
 
+  post 'mailchimp/subscribe' => 'mailchimp#subscribe'
 
 end

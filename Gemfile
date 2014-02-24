@@ -17,6 +17,8 @@ gem 'neat'
 gem 'rmagick'
 gem 'carrierwave'
 
+gem 'mailchimp-api'
+
 group :development do
   gem 'better_errors'
   gem 'sextant'

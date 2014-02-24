@@ -1,0 +1,18 @@
+
+<section id="registration">
+  <div class="container">
+    <h1>Register for a class</h1>
+    <div id="response">
+      <ul id="messages"></ul>
+    </div>
+    <%= form_tag('/mailchimp/subscribe', method: "post", id: "mailchimp", remote: "true") do -%>
+    <%= text_field(:name, :first_name, {id: "first-name", placeholder: "first name"})  %>
+    <%= text_field(:name, :last_name, {id: "last-name", placeholder: "last name"})  %>
+    <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+    <%= telephone_field(:phone, :number, {id: "phone", placeholder: "phone number"}) %>
+    <%= text_field(:company, :name, {id: "company", placeholder: "company name"}) %>
+    <%= text_area(:message, :text, {id: "message", placeholder: "anything else you'd like us to know?"}) %>
+    <%= submit_tag "Register", id: 'registration-submit' %>
+    <% end %>
+  </div>
+</section>

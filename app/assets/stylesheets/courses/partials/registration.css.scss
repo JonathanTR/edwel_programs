@@ -1,0 +1,59 @@
+@mixin message-box($color){
+  border: 1px solid $color;
+  background-color: lighten($color, 20%);
+}
+
+#registration {
+  @include texture(lighten($peter_river, 5%), 2, 0);
+  @include header-style;
+  padding-top: 2em;
+  form {
+    input, textarea {
+      margin: 0.2em;
+    }
+    #registration-submit {
+      @include linear-gradient($emerald, $nephritis);
+      display: block;
+      margin-top: 0.2em;
+      margin-left: 64%;
+      padding: 0.5em;
+      text-shadow: none;
+      border-radius: 5px;
+      border: none;
+      background-color: $nephritis;
+      border-bottom: 2px solid darken($nephritis, 10%);
+      color: white;
+      font-size: 1.3em;
+      font-family: $header-font;
+      &:hover {
+        background-color: lighten ($nephritis, 5%);
+        @include linear-gradient(lighten($emerald, 5%), lighten($nephritis, 5%));
+      }
+    }
+  }
+  #messages {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      width: 78.5%;
+      margin: 2px;
+      border-radius: 3px;
+      padding: 0.2em 0.5em;
+      color: $almost_black;
+    }
+  }
+}
+
+
+.waiting {
+  @include message-box($peter_river);
+}
+
+.success {
+  font-size: 1.2em;
+  @include message-box($emerald);
+}
+
+.error {
+  @include message-box($pomegranate);
+}

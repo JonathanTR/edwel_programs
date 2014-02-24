@@ -5,6 +5,17 @@
     height: $navbar-height;
   }
   #register {
+    @include linear-gradient($emerald, $nephritis);
+    text-shadow: none;
+    border-radius: 5px;
+    border-bottom: 2px solid darken($nephritis, 10%);
+    background-color: $nephritis;
+    font-size: 1.3em;
+    font-family: $header-font;
+    &:hover {
+      background-color: lighten ($nephritis, 5%);
+      @include linear-gradient(lighten($emerald, 5%), lighten($nephritis, 5%));
+    }
     @media (max-width: $screen-sm-min){
       display: block;
       width: 80%;
