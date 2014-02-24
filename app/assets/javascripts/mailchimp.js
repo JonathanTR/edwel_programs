@@ -1,3 +1,22 @@
+var registrationValidator = function(){
+  var firstNameFilled = function(){
+    return $('#first-name').val() != ""
+  }
+
+  var lastNameFilled = function(){
+    return $('#last-name').val() != ""
+  }
+
+  var emailFilled = function(){
+    return $('#email').val() != ""
+  }
+
+  var phoneFilled = function(){
+    return $('#phone').val() != ""
+  }
+
+}
+
 var addRegistrationHandler = function(){
   $('form#mailchimp')
     .bind("ajax:beforeSend", function(){
