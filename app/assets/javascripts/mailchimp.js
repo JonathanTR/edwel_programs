@@ -1,20 +1,56 @@
-var registrationValidator = function(){
-  var firstNameFilled = function(){
-    return $('#first-name').val() != ""
+var displayError = function(message){
+  var errorMessage = "<ul class='registration-message'><li class='error'>" + message + "</li></ul>"
+  $('div#response').html(errorMessage);
+}
+
+var addRegistrationValidator = function(){
+  var firstNameEmpty = function(){
+    return $('#first-name').val() == ""
   }
 
-  var lastNameFilled = function(){
-    return $('#last-name').val() != ""
+  var lastNameEmpty = function(){
+    return $('#last-name').val() == ""
   }
 
-  var emailFilled = function(){
-    return $('#email').val() != ""
+  var emailEmpty = function(){
+    return $('#email').val() == ""
   }
 
-  var phoneFilled = function(){
-    return $('#phone').val() != ""
+  var emailInvalid = function(){
+    if ($('#email').val().match(/.+\@.+\..+/)){
+      return false
+    }else{
+      return true
+    }
   }
 
+  var phoneEmpty = function(){
+    return $('#phone').val() == ""
+  }
+
+  $('#registration-submit').on("click", function(e){
+    e.preventDefault()
+    switch(true){
+      case firstNameEmpty():
+        displayError('Please provide a first name.')
+        break
+      case lastNameEmpty():
+        displayError('Please provide a last name.')
+        break
+      case emailEmpty():
+        displayError('Please provide an email address.')
+        break
+      case emailInvalid():
+        displayError('Please provide a valid email address.')
+        break
+      case phoneEmpty():
+        displayError('Please provide a phone number.')
+        break
+      default: 
+        $('form').submit()
+        break
+    }
+  })
 }
 
 var addRegistrationHandler = function(){
@@ -48,5 +84,6 @@ var addRegistrationHandler = function(){
 }
 
 $(document).ready(function(){
+  addRegistrationValidator()
   addRegistrationHandler()
 })
