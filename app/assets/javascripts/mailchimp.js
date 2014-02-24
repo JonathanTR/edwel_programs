@@ -1,6 +1,9 @@
 var displayError = function(message){
-  var errorMessage = "<ul class='registration-message'><li class='error'>" + message + "</li></ul>"
-  $('div#response').html(errorMessage);
+  $('div#response').slideUp(400, function(){
+    var errorMessage = "<ul class='registration-message'><li class='error'>" + message + "</li></ul>"
+    $('div#response').html(errorMessage);
+    $('div#response').slideDown();
+  });
 }
 
 var addRegistrationValidator = function(){
