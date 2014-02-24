@@ -6,6 +6,7 @@ class MailchimpController < ApplicationController
       begin
         @mailchimp.lists.subscribe(@list_id, {'email' => email}, {}, 'html', false)
         render json: { message: "Thank you for registering. A representative will be in touch with you shortly to discuss class details and answer your questions."}.to_json
+        Notifier.registration_request('jonathan.d.reilly@gmail.com').deliver
       rescue Mailchimp::ListAlreadySubscribedError 
         format.json{render :json => {:message => "#{email} is already subscribed to the list"}}
       rescue Mailchimp::Error => ex
