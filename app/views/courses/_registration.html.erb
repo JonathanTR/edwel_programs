@@ -5,6 +5,7 @@
       <%= form_tag('/mailchimp/subscribe', method: "post", id: "mailchimp", remote: "true") do -%>
       <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
       <%= telephone_field(:phone, :number, {id: "phone", placeholder: "phone number"}) %>
+      <%= text_field(:company, :name, {id: "company", placeholder: "company name"}) %>
       <%= submit_tag "Register", id: 'registration-submit' %>
     <% end %>
   </div>
