@@ -6,7 +6,7 @@ class MailchimpController < ApplicationController
     if !email.blank?
       begin
         Notifier.registration_request(email, phone).deliver
-        @mailchimp.lists.subscribe(@list_id, {'email' => email}, {}, 'html', false)
+        @mailchimp.lists.subscribe(@list_id, {'email' => email}, {'phone' => phone}, 'html', false)
         render json: { message: "Thank you for registering. A representative will be in touch with shortly to answer your questions."}.to_json
       rescue Mailchimp::ListAlreadySubscribedError 
         format.json{render :json => {:message => "#{email} is already subscribed to the list"}}
