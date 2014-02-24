@@ -63,10 +63,13 @@ var addRegistrationHandler = function(){
       displayMessage('...submitting registration', 'waiting')
     })
     .bind("ajax:success", function(evt, data){
-      console.log(data.message)
-      var successMessage = "<ul class='registration-message'><li class='success'>" + data.message + "</li></ul>"
-      $('div#response').html(successMessage)
+      displayMessage(data.message, 'success')
+      $('input#first-name').val("")
+      $('input#last-name').val("")
       $('input#email').val("")
+      $('input#phone').val("")
+      $('input#company').val("")
+      $('input#message').val("")
     })
     .bind("ajax:error", function(evt, data){
       var errorList, errorText
