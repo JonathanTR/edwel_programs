@@ -13,7 +13,7 @@ class MailchimpController < ApplicationController
         @mailchimp.lists.subscribe(@list_id, {'email' => email}, {'fname' => fname, 'lname' => lname, 'phone' => phone, 'company' => company}, 'html', false)
         render json: { message: "Thank you for registering. A representative will be in touch with shortly to answer your questions."}.to_json
       rescue Mailchimp::ListAlreadySubscribedError 
-        render json: {:message => "#{email} is already subscribed to the list"}.to_json
+        render json: {:message => "#{email} has already registered for a class."}.to_json
       rescue Mailchimp::ListMergeFieldRequiredError
         render json: {:message => "Please fill out all the required fields"}.to_json
       rescue Mailchimp::Error => ex
